@@ -39,25 +39,27 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link {% block home %}{% endblock %}" href="#home">Accueil</a>
+                    <a class="nav-link {% block home %}{% endblock %}" href="#home">{{ "Accueil"|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% block about %}{% endblock %}" href="#about">À Propos</a>
+                    <a class="nav-link {% block about %}{% endblock %}" href="#about">{{ "À Propos"|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% block services %}{% endblock %}" href="#services">Services</a>
+                    <a class="nav-link {% block services %}{% endblock %}" href="#services">{{ "Services"|trans }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% block quality %}{% endblock %}" href="#quality">Qualité</a>
+                    <a class="nav-link {% block quality %}{% endblock %}" href="#quality">{{ "Qualité"|trans }}</a>
                 </li>
                 {#<li class="nav-item">
                     <a class="nav-link {% block stats %}{% endblock %}" href="#stats">Chiffres</a>
                 </li>#}
                 <li class="nav-item">
-                    <a class="nav-link {% block contact %}{% endblock %}" href="#contact">Contact</a>
+                    <a class="nav-link {% block contact %}{% endblock %}" href="#contact">{{ "Contact"|trans }}</a>
                 </li>
             </ul>
         </div>
+        <button id="changelang" class="lang-button">
+        </button>
     </div>
 </nav>
 {% block body %}
@@ -72,39 +74,51 @@
                         <span class="text-accent">GMV</span>
                         <span class="text-light">ENGINEERING</span>
                     </h5>
-                    <p class="footer-tagline">"La référence en ingénierie aéronautique"</p>
+                    <p class="footer-tagline">"{{ 'La référence en ingénierie aéronautique'|trans }}"</p>
                 </div>
             </div>
 
             <div class="col-lg-2 col-md-6 mb-4">
-                <h6 class="footer-title">Navigation</h6>
+                <h6 class="footer-title">{{ "Navigation"|trans }}</h6>
                 <ul class="footer-links">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#about">À Propos</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#quality">Qualité</a></li>
+                    <li><a href="#home">{{ "Accueil"|trans }}</a></li>
+                    <li><a href="#about">{{ "À Propos"|trans }}</a></li>
+                    <li><a href="#services">{{ "Services"|trans }}</a></li>
+                    <li><a href="#quality">{{ "Qualité"|trans }}</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-4">
-                <h6 class="footer-title">Services</h6>
+                <h6 class="footer-title">{{ "Services"|trans }}</h6>
                 <ul class="footer-links">
-                    <li><a href="#services">Maintenance</a></li>
-                    <li><a href="#services">Ingénierie de Vol</a></li>
-                    <li><a href="#services">Pièces Aéronautiques</a></li>
-                    <li><a href="#services">Tests Préventifs</a></li>
+                    <li><a href="#services">{{ "Maintenance"|trans }}</a></li>
+                    <li><a href="#services">{{ "Ingénierie de Vol"|trans }}</a></li>
+                    <li><a href="#services">{{ "Pièces Aéronautiques"|trans }}</a></li>
+                    <li><a href="#services">{{ "Tests Préventifs"|trans }}</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 mb-4">
-                <h6 class="footer-title">Contact</h6>
+                <h6 class="footer-title">{{ "Contact"|trans }}</h6>
                 <ul class="footer-contact">
-                    <li><i class="fa fa-location-dot fa-lg"></i> Yaoundé – Essos Marché</li>
-                    <li><i class="fa-solid fa-at fa-lg"></i> contact@gmvengineering.com</li>
-                    <li><i class="fa-solid fa-square-phone fa-lg"></i>
+                    <li>
+                        <i class="fa fa-location-dot fa-lg"></i>
+                        58 River Bank, Roseau, DOMINICA
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-at fa-lg"></i>
+                        <a class="text-white" href="mailto:contact@gmvengineering.com">contact@gmvengineering.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-square-phone fa-lg"></i>
+                        <a class="text-white" href="tel:+17676129056 ">+1 767 612 9056 </a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-square-phone fa-lg"></i>
                         <a class="text-white" href="tel:+971523071828">+ 971 523 071 828</a>
                     </li>
-                    <li><i class="fa-solid fa-square-phone fa-lg"></i>
+                    <li>
+                        <i class="fa-solid fa-square-phone fa-lg"></i>
                         <a class="text-white" href="tel:+237677700109">+ 237 677 700 109</a>
                     </li>
                 </ul>
@@ -128,6 +142,7 @@
 </footer>
 
 <!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"></script>
 <!-- Custom JS -->

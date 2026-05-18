@@ -17,11 +17,12 @@
     --font-primary: 'Inter', sans-serif;
     --font-display: 'Playfair Display';
 
-    --transition: all 0.3s ease !important;
+    --transition: all 0.5s ease !important;
+    --transform: translateY(-10px);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -398,7 +399,7 @@ html {
 }
 
 .value-card:hover {
-    transform: translateY(-8px);
+    transform: var(--transform) !important;
     box-shadow: var(--shadow-xl);
     border-color: var(--secondary-color);
 }
@@ -465,7 +466,7 @@ html {
     height: 4px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     transform: scaleX(0);
-    transform-origin: left;
+    transform-origin: center;
     transition: var(--transition);
 }
 
@@ -474,7 +475,7 @@ html {
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
+    transform: var(--transform) !important;
     box-shadow: var(--shadow-xl);
     border-color: var(--secondary-color);
 }
@@ -650,7 +651,7 @@ html {
 }
 
 .stat-card:hover {
-    transform: translateY(-5px);
+    transform: var(--transform) !important;
     background: rgba(255, 255, 255, 0.15);
 }
 
@@ -736,7 +737,7 @@ html {
 }
 
 .contact-info-card:hover {
-    transform: translateY(-5px);
+    transform: var(--transform) !important;
     box-shadow: var(--shadow-lg);
     border-color: var(--secondary-color);
 }
@@ -941,6 +942,23 @@ html {
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.lang-button {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+    display: flex;
+    margin-left: 20px;
+    padding: 5px 10px;
+}
+
+.lang-button:hover {
+    background: var(--primary-color);
+    color: var(--white);
 }
 
 /* Responsive Design */

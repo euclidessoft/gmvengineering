@@ -421,3 +421,22 @@ const observer = new IntersectionObserver(function(entries) {
 document.querySelectorAll('.animate-on-scroll').forEach(element => {
     observer.observe(element);
 });
+
+//langue systeme
+var url = $(location).attr("href");
+var fr = url.indexOf("/fr/");
+var lang = $('#changelang');
+if (fr !== -1) {
+    lang.html('EN');
+
+} else {
+    lang.html('FR');
+}
+lang.click(function () {
+    if (fr !== -1) {
+        url = url.replace("/fr/", "/en/");
+    } else {
+        url = url.replace("/en/", "/fr/");
+    }
+    document.location.href = url;
+});
