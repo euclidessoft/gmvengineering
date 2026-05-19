@@ -225,10 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show success message
                 const successMessage = document.createElement('div');
                 successMessage.className = 'alert alert-success mt-3';
-                successMessage.innerHTML = `
-                    <strong>Merci !</strong> Votre message a été envoyé avec succès. 
-                    Notre équipe vous contactera dans les plus brefs délais.
-                `;
+                successMessage.innerHTML = '<strong>Merci !</strong> Votre message a été envoyé avec succès. Notre équipe vous contactera dans les plus brefs délais.';
                 contactForm.appendChild(successMessage);
 
                 // Reset form after 3 seconds
